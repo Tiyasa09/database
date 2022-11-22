@@ -1,0 +1,16 @@
+create database mydbms;
+use mydbms;
+create table Flower(fname varchar(15) not null unique,fcolour varchar(10) not null,fprice int not null);
+alter table Flower ADD fseason varchar(15) not null after fname;
+alter table Flower MODIFY fcolour varchar(15) not null;
+alter table Flower MODIFY fname varchar(12) not null unique;
+alter table Flower rename to Flower_details;
+insert into Flower_details values('rose','all','red',25);
+insert into Flower_details values('jasmine','all','white',15);
+insert into Flower_details values('hibiscus','all','red',5);
+insert into Flower_details values('tulip','all','purple',50);
+insert into Flower_details values('daliya','winter','all',20);
+alter table Flower_details DROP COLUMN fseason;
+insert into Flower_details values('lotus','white',16);
+truncate table Flower_details;
+drop table Flower_details;

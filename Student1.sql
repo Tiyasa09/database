@@ -38,3 +38,25 @@ insert into student_details values
 (8,'ABHISHEK',834821188,'abhishek@gmail.com','darjeeling','MSc',1000.3,'1988-03-07',26),
 (9,'BIDISHA',834824488,'bidi@gmail.com','jammu and kashmir','BE',1000.3,'1988-02-08',33),
 (10,'TIYASA',834800288,'tiyasa@gmail.com','chennai','BSc',1000.3,'1979-12-09',40);
+#select
+select * from student_details where squalification ='BE';
+#and
+select * from student_details where saddr='chennai' and sfees='1000.3';
+#or
+select * from student_details where saddr='chennai' or sfees='1000'
+#not
+select * from student_details where squalification='BE';
+#in
+select * from student_details where saddr in ('mumbai','chennai');
+#start with
+select * from student_details where sname like 'A%';
+#ends with 
+select * from student_details where sname like '%A';
+#contain letter
+select * from student_details where sname like '%A%';
+#start and end ends with
+select * from student_details where sname like 'T%A';
+#missing letters
+select * from student_details where saddr like 'che__ai';
+select * from student_details where squalification like 'B_';
+
